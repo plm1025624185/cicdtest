@@ -1,4 +1,7 @@
-FROM jdk1.8
-VOLUME /tmp
-ADD app.jar app.jar
-ENTRYPOINT ["java","‐jar","/app.jar"]
+FROM openjdk:8-jdk
+
+WORKDIR /root
+
+COPY cicdtest.jar .
+
+ENTRYPOINT java -jar cicdtest.jar
