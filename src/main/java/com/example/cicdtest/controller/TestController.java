@@ -13,4 +13,9 @@ public class TestController {
     public String test() {
         return "test111";
     }
+
+    @GetMapping("/ok")
+    public String ok() {
+        return "ok";
+    }
 }
